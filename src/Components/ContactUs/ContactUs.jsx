@@ -46,7 +46,7 @@ const ContactUs = () => {
             animate={{ opacity: 1 }} 
             transition={{ duration: 0.5 }}
         >
-            <div className='lg:pt-[150px] md:pt-[200px] pt-[290px]'>
+            <div className='lg:pt-[150px] md:pt-[120px] pt-[92px]'>
                 <div className='py-[20px]'>
                     <div className='text-center mb-[25px]'>
                         <h1 className='text-[45px] font-poppins font-bold text-orange border-b-[1px] inline-block'>Contact Us</h1>

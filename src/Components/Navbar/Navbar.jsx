@@ -46,7 +46,7 @@ const Navbar = () => {
 
     return (
         <div className='fixed w-[100%] z-[9999]'>
-            <div className='bg-orange py-[15px]'>
+            <div className='bg-orange py-[15px] lg:block hidden'>
                 <div className='lg:max-w-[1850px] px-[20px] m-auto'>
                     <div className='flex lg:flex-row flex-col items-center gap-[10px] justify-center md:justify-between'>
                         <p className='font-poppins text-white flex items-center gap-[5px]'>

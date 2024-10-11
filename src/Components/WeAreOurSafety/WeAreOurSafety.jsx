@@ -4,7 +4,7 @@ import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
 import { Link } from 'react-router-dom';
 import Slider from 'react-slick';  
-import { galery1, galery5, galery6 } from '../Images/Images';
+import { galery1, galery2, galery5, galery6 } from '../Images/Images';
 
 const containerVariants = {
     hidden: { opacity: 0 },
@@ -43,15 +43,15 @@ const WeAreOurSafety = () => {
     });
 
     return (
-        <div className='lg:pt-[190px] md:pt-[250px] pt-[290px]' ref={ref}>
-            <div className='flex flex-col lg:flex-row overflow-hidden items-center gap-[15px] md:gap-[25px] lg:gap-0'>
+        <div className='lg:pt-[190px] md:pt-[120px] pt-[92px]' ref={ref}>
+            <div className='flex  lg:flex-row overflow-hidden items-center gap-[15px] md:gap-[25px] lg:gap-0 flex-col-reverse'>
                 <motion.div
                     className='lg:w-[50%] w-[100%] md:px-[50px] px-[20px]'
                     variants={containerVariants}
                     initial="hidden"
                     animate={inView ? 'visible' : 'hidden'}  // Animation on view
                 >
-                    <motion.h1 className='xl:text-[60px] lg:text-[45px] md:text-[45px] font-bold font-poppins text-[35px]' variants={textAnimation}>
+                    <motion.h1 className='xl:text-[60px] lg:text-[45px] md:text-[55px] font-bold font-poppins text-[32px]' variants={textAnimation}>
                         Your Trusted Partner in <span className='span_text_blue'>Environmental</span> and <br />
                         <span className='span_text_blue'>Safety Solutions</span>
                     </motion.h1>
@@ -60,7 +60,7 @@ const WeAreOurSafety = () => {
                         At PNM Enviro-Safe Solutions, we specialize in providing comprehensive Environmental, Health, Industrial Safety, and Corporate Social Responsibility services, all under one roof. With our motto, "Committed for Better Solutions," we drive innovation and growth through tailored solutions that meet your unique needs.
                     </motion.p>
 
-                    <motion.div className='mt-8' variants={textAnimation}>
+                    <motion.div className='lg:mt-8' variants={textAnimation}>
                         <div className='grid grid-cols-2 gap-4'>
                             <div>
                                 <h1 className='md:text-5xl text-[45px] font-bold text-orange'>
@@ -115,7 +115,7 @@ const WeAreOurSafety = () => {
                             <img src={galery5} alt='Slide 2' className='w-full md:min-h-[650px] md:max-h-[650px] object-cover min-h-[300px]' />
                         </div>
                         <div>
-                            <img src={galery6} alt='Slide 3' className='w-full md:min-h-[650px] md:max-h-[650px] object-cover min-h-[300px]' />
+                            <img src={galery2 } alt='Slide 3' className='w-full md:min-h-[650px] md:max-h-[650px] object-cover min-h-[300px]' />
                         </div>
                     </Slider>
                 </motion.div>

@@ -74,7 +74,7 @@ const Blogs = () => {
 
   return (
     <div className='relative lg:max-w-[1850px] px-[20px] m-auto lg:pt-[40px]'>
-      <div className='lg:pt-[150px] md:pt-[200px] pt-[290px]'>
+      <div className='lg:pt-[150px] md:pt-[120px] pt-[92px]'>
         <div className='py-[20px]'>
           <div className='text-center mb-[25px]'>
             <h1 className='text-[45px] font-poppins font-bold text-orange border-b-[1px] inline-block'>Blogs</h1>
