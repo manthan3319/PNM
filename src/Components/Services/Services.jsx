@@ -319,7 +319,7 @@ const Services = () => {
                         <span>PNM Enviro-Safe Solutions is dedicated to providing top-notch</span>
                         <span className='font-bold'> Environment Services</span>
                         <span>, offering scientifically sound and practically applicable solutions for a safer, sustainable future.</span>
-                        <span className='text-orange text-[25px] px-[10px]'>&</span>
+                        <span className='text-white text-[25px] px-[10px]'>&</span>
                         <span> We also specialize in</span>
                         <span className='font-bold'> Industrial Safety & Health</span>
                         <span>, ensuring that businesses adhere to high standards of safety and health regulations to protect their workforce and operations.</span>
@@ -329,11 +329,14 @@ const Services = () => {
                 <div className="mt-20">
                     <Tabs>
                         <TabList className='tab_list flex md:flex-row flex-col justify-center md:space-x-4 gap-[15px] pb-[50px]'>
-                            <Tab className="cursor-pointer text-white bg-slate-500 text-[25px] font-semibold border-b-2 border-transparent hover:border-orange focus:outline-none focus:border-pink p-[15px]">
+                            <Tab className="cursor-pointer text-white bg-slate-500 text-[19px] font-semibold border-b-2 border-transparent hover:border-orange focus:outline-none focus:border-pink p-[15px]">
                                 Environment Services
                             </Tab>
-                            <Tab className="cursor-pointer text-white text-[25px] bg-slate-500 font-semibold border-b-2 border-transparent hover:border-orange focus:outline-none focus:border-pink p-[15px]">
+                            <Tab className="cursor-pointer text-white text-[19px] bg-slate-500 font-semibold border-b-2 border-transparent hover:border-orange focus:outline-none focus:border-pink p-[15px]">
                                 Industrial Safety & Health
+                            </Tab>
+                            <Tab className="cursor-pointer text-white text-[19px] bg-slate-500 font-semibold border-b-2 border-transparent hover:border-orange focus:outline-none focus:border-pink p-[15px]">
+                                ESG
                             </Tab>
                         </TabList>
 
@@ -362,6 +365,31 @@ const Services = () => {
                             </motion.div>
                         </TabPanel>
 
+
+                        <TabPanel>
+                            <motion.div className='mt-8 text-black grid 2xl:grid-cols-6 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-[25px]'>
+                                {safetyHealthServices.map((service, index) => (
+                                    <motion.div
+                                        key={service.id}
+                                        className="flex flex-col bg-[#ffffff5e] service_card_box p-[15px] min-h-[200px] border-white border-[1px] rounded-lg overflow-hidden shadow-lg"
+                                        variants={{
+                                            hidden: { opacity: 0, x: -50 },
+                                            visible: { opacity: 1, x: 0 }
+                                        }}
+                                        initial="hidden"
+                                        animate="visible"
+                                        transition={{ duration: 0.5, delay: index * 0.1 }} // Staggered effect
+                                    >
+                                        <img src={service.img} alt={service.name} className='img_filter w-[80px] m-auto min-h-[50px] max-h-[80px] mb-[10px]' />
+                                        <h1 className='mt-auto text-white text-center font-poppins text-[20px]'>{service.name}</h1>
+
+                                        <div className='mt-[10px] text-center'>
+                                            <Link to={`/service-details/${service.name}`} className='inline-block bg-orange text-white px-[10px] py-[5px] rounded-lg font-poppins'>View More</Link>
+                                        </div>
+                                    </motion.div>
+                                ))}
+                            </motion.div>
+                        </TabPanel>
 
                         <TabPanel>
                             <motion.div className='mt-8 text-black grid 2xl:grid-cols-6 xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-[25px]'>

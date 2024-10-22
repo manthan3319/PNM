@@ -61,13 +61,24 @@ const KeppInTouce = () => {
                                 </div>
                             </div>
 
-                            <div>
+                            <div className='grid sm:grid-cols-2 grid-cols-1 gap-[15px]'>
                                 <input
                                     type="tel"
                                     id="mobile"
                                     name="mobile"
                                     value={formData.mobile}
                                     placeholder='Enter Your Subject'
+                                    onChange={handleInputChange}
+                                    className='w-full p-3 rounded bg-gray-700 text-white'
+                                    required
+                                />
+
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    value={formData.mobile}
+                                    placeholder='Enter Your email'
                                     onChange={handleInputChange}
                                     className='w-full p-3 rounded bg-gray-700 text-white'
                                     required

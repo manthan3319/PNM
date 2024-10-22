@@ -38,13 +38,13 @@ const sliderSettings = {
 
 const WeAreOurSafety = () => {
     const { ref, inView } = useInView({
-        triggerOnce: false,  // False so that animation can repeat every time
+        triggerOnce: false,  
         threshold: 0.1,
     });
 
     return (
-        <div className='lg:pt-[190px] md:pt-[120px] pt-[92px]' ref={ref}>
-            <div className='flex  lg:flex-row overflow-hidden items-center gap-[15px] md:gap-[25px] lg:gap-0 flex-col-reverse'>
+        <div className='pt-[50px]' ref={ref}>
+            <div className='flex  lg:flex-row overflow-hidden items-center gap-[15px] md:gap-[25px] lg:gap-0 flex-col'>
                 <motion.div
                     className='lg:w-[50%] w-[100%] md:px-[50px] px-[20px]'
                     variants={containerVariants}
@@ -64,25 +64,25 @@ const WeAreOurSafety = () => {
                         <div className='grid grid-cols-2 gap-4'>
                             <div>
                                 <h1 className='md:text-5xl text-[45px] font-bold text-orange'>
-                                    {inView && <CountUp end={18} duration={2} />} +
+                                    {inView && <CountUp end={7} duration={2} />} +
                                 </h1>
                                 <p className='text-[18px] font-poppins'>Years of active service</p>
                             </div>
                             <div>
                                 <h1 className='md:text-5xl text-[45px] font-bold text-orange'>
-                                    {inView && <CountUp end={800} duration={2} />} +
+                                    {inView && <CountUp end={50} duration={2} />} +
                                 </h1>
                                 <p className='text-[18px] font-poppins'>Global Clientele</p>
                             </div>
                             <div>
                                 <h1 className='md:text-5xl text-[45px] font-bold text-orange'>
-                                    {inView && <CountUp end={300} duration={2} />} +
+                                    {inView && <CountUp end={25} duration={2} />} +
                                 </h1>
                                 <p className='text-[18px] font-poppins'>In-house personnel & SMEs</p>
                             </div>
                             <div>
                                 <h1 className='md:text-5xl text-[45px] font-bold text-orange'>
-                                    {inView && <CountUp end={1100} duration={2} />} +
+                                    {inView && <CountUp end={45} duration={2} />} +
                                 </h1>
                                 <p className='text-[18px] font-poppins'>Worksites covered</p>
                             </div>
@@ -91,7 +91,7 @@ const WeAreOurSafety = () => {
 
                     {/* Buttons */}
                     <motion.div className='mt-8 flex flex-row space-x-4' variants={textAnimation}>
-                        <Link className='lg:text-[20px] font-poppins bg-gradient-end text-white py-[10px] px-[10px] rounded-2xl border-black border-[1px] hover:bg-light-blue hover:border-[1px] hover:border-light-blue hover:text-black'>
+                        <Link className='lg:text-[20px] font-poppins bg-orange text-white py-[10px] px-[10px] rounded-2xl border-black border-[1px] hover:bg-light-blue hover:border-[1px] hover:border-light-blue hover:text-black'>
                             Learn More <span><i className="fa fa-angle-right" aria-hidden="true"></i></span>
                         </Link>
                         <Link to="/contact" className='lg:text-[20px] font-poppins bg-white text-black py-[10px] px-[10px] rounded-2xl border-black border-[1px] hover:bg-light-blue hover:border-[1px] hover:border-light-blue hover:text-black'>

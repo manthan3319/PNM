@@ -2,27 +2,54 @@ import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { logo } from '../Images/Images';
+import { BirlaLogo, logo, reliance, TataPowerlogo } from '../Images/Images';
 
 const clientLogos = [
-  { id: 1, src: logo, alt: 'Client 1' },
-  { id: 2, src: logo, alt: 'Client 2' },
-  { id: 3, src: logo, alt: 'Client 3' },
+  { id: 1, src: reliance, alt: 'Client 1' },
+  { id: 2, src: BirlaLogo, alt: 'Client 2' },
+  { id: 3, src: TataPowerlogo, alt: 'Client 3' },
   { id: 4, src: logo, alt: 'Client 4' },
-  { id: 4, src: logo, alt: 'Client 4' },
-  { id: 4, src: logo, alt: 'Client 4' },
-  // Add more logos as needed
+  { id: 5, src: logo, alt: 'Client 5' }, // Adjusted id for uniqueness
+  { id: 6, src: logo, alt: 'Client 6' }, // Adjusted id for uniqueness
+];
+
+const clientReviews = [
+  {
+    id: 1,
+    review: "Great service! Highly recommend.",
+    client: "Client 1"
+  },
+  {
+    id: 2,
+    review: "Excellent support and timely delivery.",
+    client: "Client 2"
+  },
+  {
+    id: 3,
+    review: "Very satisfied with the collaboration.",
+    client: "Client 3"
+  },
+  {
+    id: 4,
+    review: "Professional and dedicated team.",
+    client: "Client 4"
+  },
+  {
+    id: 5,
+    review: "Will definitely work with them again!",
+    client: "Client 5"
+  },
 ];
 
 const OurClint = () => {
-  const settings = {
+  const logoSettings = {
     dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 5,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 2000, // Adjust this for your autoplay speed
+    autoplaySpeed: 2000,
     arrows: false,
     responsive: [
       {
@@ -46,17 +73,41 @@ const OurClint = () => {
     ],
   };
 
+  const reviewSettings = {
+    dots: false,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    arrows: true,
+  };
+
   return (
-    <div className="relative lg:max-w-[1850px] px-[20px] m-auto lg:mt-[40px]">
+    <div className="relative lg:max-w-[1850px] px-[20px] m-auto lg:mt-[40px] overflow-hidden">
       <h2 className="text-center text-[45px] font-bold mb-10">Our Clients</h2>
-      <Slider {...settings}>
-        {clientLogos.map((logo) => (
-          <div key={logo.id} className="p-4">
-            <img src={logo.src} alt={logo.alt} className="w-full h-[100px] object-contain" />
-            {/* <h1>hwllo</h1> */}
-          </div>
-        ))}
-      </Slider>
+      <div>
+        <Slider {...logoSettings}>
+          {clientLogos.map((logo) => (
+            <div key={logo.id} className="p-4">
+              <img src={logo.src} alt={logo.alt} className="w-full h-[100px] object-contain" />
+            </div>
+          ))}
+        </Slider>
+      </div>
+
+      <div className="mt-10">
+        <h2 className="text-center text-[30px] font-bold mb-6">What Our Clients Say</h2>
+        <Slider {...reviewSettings}>
+          {clientReviews.map((review) => (
+            <div key={review.id} className="p-4 text-center">
+              <p className="text-lg italic">"{review.review}"</p>
+              <p className="text-sm font-semibold mt-2">- {review.client}</p>
+            </div>
+          ))}
+        </Slider>
+      </div>
     </div>
   );
 };

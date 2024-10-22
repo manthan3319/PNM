@@ -9,14 +9,14 @@
 }
 
 .react-tabs__tab--selected {
-    background: #FF6B00 !important;
+    background: #020764 !important;
     border-color: #aaa;
     color: white !important;
     border-radius: 5px 5px 0 0;
 }
 
 .service_card_box{
-    box-shadow: 1px 1px 15px #ff6b00;
+    box-shadow: 1px 1px 15px #020764;
 }
 
 .img_filter{

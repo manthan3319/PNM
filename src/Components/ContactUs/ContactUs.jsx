@@ -46,7 +46,7 @@ const ContactUs = () => {
             animate={{ opacity: 1 }} 
             transition={{ duration: 0.5 }}
         >
-            <div className='lg:pt-[150px] md:pt-[120px] pt-[92px]'>
+            <div className='lg:pt-[220px] md:pt-[120px] pt-[92px]'>
                 <div className='py-[20px]'>
                     <div className='text-center mb-[25px]'>
                         <h1 className='text-[45px] font-poppins font-bold text-orange border-b-[1px] inline-block'>Contact Us</h1>
@@ -67,7 +67,7 @@ const ContactUs = () => {
 
                             <motion.div className='text-center bg-white border-[2px] border-custome px-[15px] py-[25px] rounded-xl contact_Card_shadow'>
                                 <span className='text-[35px]'><i className="fa fa-envelope-o" aria-hidden="true"></i></span>
-                                <p className='text-[20px] font-bold font-poppins'>info@pnmess.com</p>
+                                <p className='text-[20px] font-bold font-poppins'>info@pnmess.in</p>
                             </motion.div>
 
                             <motion.div className='text-center bg-white border-[2px] border-custome px-[15px] py-[25px] rounded-xl contact_Card_shadow'>

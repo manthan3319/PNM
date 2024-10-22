@@ -46,8 +46,32 @@ import galery6 from "./gallery6.jpeg";
 import galery7 from "./gallery7.jpg";
 import logo from "./logo.png";
 import logo2 from "./PNM LOGO-01.jpg";
+import logo3 from "./pnmlogo.png";
+import reliance from "./RELIANCE-LOGO.png";
+import TataPowerlogo from "./Tata_Power_logo.svg.png";
+import BirlaLogo from "./Aditya_Birla_Group_Logo.svg";
+import sliderbg1 from "./sliderbg1.jpg";
+import sliderbg2 from "./sliderbg2.jpg";
+import sliderbg3 from "./sliderbg3.jpg";
+import sliderbg4 from "./sliderbg4.jpg";
+import sliderbg5 from "./sliderbg5.jpg";
+import sliderbg6 from "./sliderbg6.jpg";
+import sliderbg7 from "./sliderbg7.jpg";
+import sliderbg8 from "./sliderbg8.jpg";
 export {
+    reliance,
+    sliderbg6,
+    BirlaLogo,
+    sliderbg2,
+    sliderbg1,
+    sliderbg3,
+    sliderbg4,
+    sliderbg5,
+    sliderbg7,
+    sliderbg8,
+    TataPowerlogo,
     logo2,
+    logo3,
     logo,
     blog3,
     blog2,

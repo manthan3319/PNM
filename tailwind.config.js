@@ -8,7 +8,7 @@ module.exports = {
       colors: {
         'light-blue': '#1DD1E1',
         'pink': '#D5006D',
-        'orange': '#FF6B00',
+        'orange': '#020764',
         'gradient-start': '#1DD1E1',
         'gradient-end': '#FF6B00',
         'custome':'#64bbb3',

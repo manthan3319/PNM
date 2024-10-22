@@ -4,17 +4,22 @@ import AboutUs from '../AboutUs/AboutUs';
 import Services from '../Services/Services';
 import OurClint from '../OurClint/OurClint';
 import KeppInTouce from '../KeppInTouce/KeppInTouce';
+import MainSlider from '../MainSlider/MainSlider';
+import GoogleMaps from '../GoogleMap/GoogleMap';
 
 const Home = () => {
   return (
     <div>
       <div id="Home">
+        <MainSlider/>
+      </div>
+      <div >
         <WeAreOurSafety />
       </div>
-      <div id="about-us"> {/* About Section ID */}
+      <div id="about-us">
         <AboutUs />
       </div>
-      <div id="services"> {/* Services Section ID */}
+      <div id="services">
         <Services />
       </div>
       <div>
@@ -22,6 +27,9 @@ const Home = () => {
       </div>
       <div>
         <KeppInTouce />
+      </div>
+      <div>
+        <GoogleMaps/>
       </div>
     </div>
   );

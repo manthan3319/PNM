@@ -11,10 +11,10 @@ const Footer = () => {
 
                         <div className='mt-[10px] flex flex-col gap-[10px]'>
                             <p className='xl:text-[25px] text-[20px]'><span><i class="fa fa-phone" aria-hidden="true"></i></span> <span>
-                                 +91 63528 45642</span></p>
+                                 +91 79036 89288</span></p>
 
                             <p className='xl:text-[25px] text-[20px]'><span><i class="fa fa-envelope-o" aria-hidden="true"></i></span> <span>
-                            info@pnmess.com </span></p>
+                            info@pnmess.in </span></p>
                         </div>
 
 

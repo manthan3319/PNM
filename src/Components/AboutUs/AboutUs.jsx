@@ -2,6 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { useInView } from 'react-intersection-observer';
+import Slider from "react-slick"; // Importing react-slick for the slider
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css"; // Slider CSS
 
 // Variants for animations
 const containerVariants = {
@@ -29,6 +32,65 @@ const textVariants = {
     },
 };
 
+// Sample team data (this can come from a dynamic API or database)
+const teamMembers = [
+    {
+        name: 'John Doe',
+        position: 'CEO',
+        image: 'https://via.placeholder.com/150', // Replace with actual images
+    },
+    {
+        name: 'Jane Smith',
+        position: 'CTO',
+        image: 'https://via.placeholder.com/150', // Replace with actual images
+    },
+    {
+        name: 'Michael Johnson',
+        position: 'Marketing Manager',
+        image: 'https://via.placeholder.com/150', // Replace with actual images
+    },
+    {
+        name: 'Emily Davis',
+        position: 'Lead Developer',
+        image: 'https://via.placeholder.com/150', // Replace with actual images
+    },
+];
+
+// Slider settings
+const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    responsive: [
+        {
+            breakpoint: 1024,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                infinite: true,
+                dots: true,
+            },
+        },
+        {
+            breakpoint: 768, // Added breakpoint for screens less than 768
+            settings: {
+                slidesToShow: 2, // Show 2 slides
+                slidesToScroll: 1,
+            },
+        },
+        {
+            breakpoint: 600,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 1,
+            },
+        },
+    ],
+};
+
+
 const AboutUs = () => {
     const { ref, inView } = useInView({
         triggerOnce: true,
@@ -36,8 +98,8 @@ const AboutUs = () => {
     });
 
     return (
-        <motion.div 
-            className='bg-[#faebd76e]' 
+        <motion.div
+            className='bg-[#faebd76e]'
             ref={ref}
             initial="hidden"
             animate={inView ? 'visible' : 'hidden'}
@@ -45,10 +107,9 @@ const AboutUs = () => {
         >
             <div className="lg:max-w-[1850px] m-auto py-16 px-[20px] lg:mt-[50px]">
                 <div className="flex flex-col lg:flex-row gap-[25px]">
-                    
-                    {/* Video Section */}
-                    <motion.div 
-                        className="lg:w-[50%] flex justify-center" 
+
+                    <motion.div
+                        className="lg:w-[50%] flex justify-center"
                         variants={textVariants}
                     >
                         <iframe
@@ -63,9 +124,8 @@ const AboutUs = () => {
                         ></iframe>
                     </motion.div>
 
-                    {/* Text Section */}
-                    <motion.div 
-                        className="lg:w-[50%]" 
+                    <motion.div
+                        className="lg:w-[50%]"
                         variants={textVariants}
                     >
                         <h2 className="lg:text-[45px] font-poppins font-bold mb-4 text-light-blue border-b-[2px] border-orange inline-block text-[35px]">
@@ -86,43 +146,40 @@ const AboutUs = () => {
                             </motion.li>
                         </ul>
 
-                        {/* Vision Section */}
-                        <motion.h3 
-                            className="text-2xl font-semibold mt-6 text-light-blue font-poppins" 
+                        <motion.h3
+                            className="text-2xl font-semibold mt-6 text-light-blue font-poppins"
                             variants={textVariants}
                         >
                             Vision
                         </motion.h3>
-                        <motion.p 
-                            className="text-[18px] mt-2 font-poppins" 
+                        <motion.p
+                            className="text-[18px] mt-2 font-poppins"
                             variants={textVariants}
                         >
                             To achieve leadership by providing scientifically accurate and practically possible services.
                         </motion.p>
 
-                        {/* Mission Section */}
-                        <motion.h3 
-                            className="text-2xl font-semibold mt-6 text-light-blue font-poppins" 
+                        <motion.h3
+                            className="text-2xl font-semibold mt-6 text-light-blue font-poppins"
                             variants={textVariants}
                         >
                             Mission
                         </motion.h3>
-                        <motion.p 
-                            className="text-[18px] mt-2 font-poppins" 
+                        <motion.p
+                            className="text-[18px] mt-2 font-poppins"
                             variants={textVariants}
                         >
                             To deliver exceptional services with quality results on schedule, ensuring both growth and professional satisfaction.
                         </motion.p>
 
-                        {/* Values Section */}
-                        <motion.h3 
-                            className="text-2xl font-semibold mt-6 text-light-blue font-poppins" 
+                        <motion.h3
+                            className="text-2xl font-semibold mt-6 text-light-blue font-poppins"
                             variants={textVariants}
                         >
                             Values
                         </motion.h3>
-                        <motion.ul 
-                            className="list-disc pl-4 space-y-4 text-lg" 
+                        <motion.ul
+                            className="list-disc pl-4 space-y-4 text-lg"
                             variants={containerVariants}
                         >
                             <motion.li className='text-[18px] font-poppins' variants={textVariants}>
@@ -136,18 +193,40 @@ const AboutUs = () => {
                             </motion.li>
                         </motion.ul>
 
-                        {/* Button */}
-                        <motion.div 
-                            className='mt-[20px]' 
+                        <motion.div
+                            className='mt-[20px]'
                             variants={textVariants}
                         >
-                            <Link 
+                            <Link
                                 className='font-poppins text-[20px] bg-orange text-white py-[15px] px-[20px] inline-block rounded-lg'
                             >
                                 GET TO KNOW US
                             </Link>
                         </motion.div>
                     </motion.div>
+                </div>
+
+                {/* Our Team Section */}
+                <div className='mt-[50px]'>
+                    <div className='text-center'>
+                        <h1 className='text-[45px] font-poppins font-bold border-b inline-block'>
+                            Our Team
+                        </h1>
+                    </div>
+
+                    <div className='mt-8 overflow-hidden'>
+                        <Slider {...sliderSettings}>
+                            {teamMembers.map((member, index) => (
+                                <div key={index} className="text-center p-4">
+                                    <div className="h-[250px] w-[250px] mx-auto rounded-full overflow-hidden shadow-lg mb-4">
+                                        <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
+                                    </div>
+                                    <h3 className="text-xl font-bold">{member.name}</h3>
+                                    <p className="text-sm text-gray-600">{member.position}</p>
+                                </div>
+                            ))}
+                        </Slider>
+                    </div>
                 </div>
             </div>
         </motion.div>
