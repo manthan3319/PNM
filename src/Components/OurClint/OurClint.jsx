@@ -2,15 +2,17 @@ import React from 'react';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-import { BirlaLogo, logo, reliance, TataPowerlogo } from '../Images/Images';
+import { BirlaLogo, DMRSICON, industowers, ltlogo, NewExpandedLogo, regal, reliance, TataPowerlogo } from '../Images/Images';
 
 const clientLogos = [
   { id: 1, src: reliance, alt: 'Client 1' },
   { id: 2, src: BirlaLogo, alt: 'Client 2' },
   { id: 3, src: TataPowerlogo, alt: 'Client 3' },
-  { id: 4, src: logo, alt: 'Client 4' },
-  { id: 5, src: logo, alt: 'Client 5' }, // Adjusted id for uniqueness
-  { id: 6, src: logo, alt: 'Client 6' }, // Adjusted id for uniqueness
+  { id: 4, src: ltlogo, alt: 'Client 4' },
+  { id: 5, src: DMRSICON, alt: 'Client 5' }, 
+  { id: 6, src: NewExpandedLogo, alt: 'Client 6' },
+  { id: 7, src: industowers, alt: 'Client 7' },
+  { id: 7, src: regal, alt: 'Client 7' },
 ];
 
 const clientReviews = [

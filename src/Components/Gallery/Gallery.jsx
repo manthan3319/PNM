@@ -4,7 +4,7 @@ import { galery1, galery2, galery3, galery4, galery5, galery6, galery7 } from '.
 
 const Gallery = () => {
   useEffect(() => {
-    window.scrollTo(0, 0); // Scroll to top
+    window.scrollTo(0, 0); 
   }, []);
 
   const galleryImages = [

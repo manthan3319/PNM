@@ -7,6 +7,8 @@ import EnvironmentServices from "./Components/EnvironmentServices/EnvironmentSer
 import Blogs from "./Components/Blogs/Blogs";
 import Gallery from "./Components/Gallery/Gallery";
 import ContactUs from "./Components/ContactUs/ContactUs";
+import Esg from "./Components/Esg/Esg";
+import TrainingAndAudit from "./Components/TrainingAndAudit/TrainingAndAudit";
 const App = () => {
   return (
     <BrowserRouter>
@@ -17,6 +19,8 @@ const App = () => {
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<ContactUs />} />
+        <Route path="/esg" element={<Esg />} />
+        <Route path="/TrainingandAudit" element={<TrainingAndAudit />} />
 
       </Routes>
       <Footer/>

@@ -50,15 +50,29 @@ import logo3 from "./pnmlogo.png";
 import reliance from "./RELIANCE-LOGO.png";
 import TataPowerlogo from "./Tata_Power_logo.svg.png";
 import BirlaLogo from "./Aditya_Birla_Group_Logo.svg";
-import sliderbg1 from "./sliderbg1.jpg";
+import sliderbg1 from "./sliderbg1 (2).jpg";
 import sliderbg2 from "./sliderbg2.jpg";
 import sliderbg3 from "./sliderbg3.jpg";
-import sliderbg4 from "./sliderbg4.jpg";
-import sliderbg5 from "./sliderbg5.jpg";
+import sliderbg4 from "./sliderbg4 (2).jpg";
+import sliderbg5 from "./sliderbg5 (2).jpg";
 import sliderbg6 from "./sliderbg6.jpg";
-import sliderbg7 from "./sliderbg7.jpg";
-import sliderbg8 from "./sliderbg8.jpg";
+import sliderbg7 from "./sliderbg7 (2).jpg";
+import sliderbg8 from "./sliderbg8 (2).jpg";
+import sliderbg9 from "./sliderbg9.jpg";
+import sliderbg10 from "./sliderbg10.jpg";
+import slider11 from "./slider11.jpg";
+import ltlogo from "./ltlogo.png";
+import DMRSICON from "./DMRC.jpg";
+import NewExpandedLogo from "./New-Expanded-Logo-02.png";
+import industowers from "./industowers.jpg";
+import regal from "./regal.jpg"
+
 export {
+    regal,
+    DMRSICON,
+    industowers,
+    NewExpandedLogo,
+    ltlogo,
     reliance,
     sliderbg6,
     BirlaLogo,
@@ -118,5 +132,8 @@ export {
     galery4,
     galery5,
     galery6,
-    galery7
+    galery7,
+    sliderbg9,
+    sliderbg10,
+    slider11
 }

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Drawer from 'react-modern-drawer';
-import { scroller } from 'react-scroll'; // Import scroller
+import { scroller } from 'react-scroll'; 
 import 'react-modern-drawer/dist/index.css';
 import { logo, logo2, logo3 } from '../Images/Images';
 
@@ -17,13 +17,12 @@ const Navbar = () => {
         setLinks([
             { name: 'Home', scrollTo: 'Home' },
             { name: 'About', scrollTo: 'about-us' },
-            { name: 'Occupational Health & Safety', scrollTo: 'services' },
-            { name: 'Environment Services', scrollTo: 'services' },
-            { name: 'ESG', scrollTo: 'services' },
-            { name: 'Our Training', scrollTo: 'about-us' },
+            { name: 'OH & Safety Solutions', scrollTo: 'services' },
+            { name: 'Environment Solutions', scrollTo: 'services' },
+            { name: 'ESG', path: '/esg' },
+            { name: 'Training / Audit', path: '/TrainingandAudit' },
             { name: 'BLOG', path: '/blogs' },
-            { name: 'GALLERY', path: '/gallery' },
-            { name: 'CONTACT US', path: '/contact' }
+            { name: 'GALLERY', path: '/gallery' }
         ]);
     }, []);
 
@@ -79,13 +78,13 @@ const Navbar = () => {
             {/* Main Navbar */}
             <div className='bg-orange py-[12px] border-b-[1px] lg:block hidden'>
                 <div className='lg:max-w-[1850px] px-[20px] m-auto'>
-                    <div className='flex xl:flex-row lg:flex-col lg:gap-y-[25px] justify-between items-center'>
-                        <div>
+                    <div className='flex xl:flex-row lg:flex-col lg:gap-y-[25px]  items-center justify-between'>
+                        <div className='2xl:w-[20%]'>
                             <Link to="/"><img src={logo3} alt='logo' className='xl:w-[150px] w-[120px]' /></Link>
                         </div>
 
-                        <div>
-                            <ul className='flex xl:space-x-10 space-x-8'>
+                        <div className='2xl:w-[70%] xl:w-[70%]'>
+                            <ul className='flex 2xl:flex-row justify-center xl:gap-y-4 xl:flex-wrap xl:space-x-10 space-x-8'>
                                 {links.map(link => (
                                     <li key={link.name} className="relative">
                                         {link.scrollTo ? (
@@ -93,17 +92,21 @@ const Navbar = () => {
                                                 onClick={() => handleScroll(link.scrollTo)}
                                                 className={link.name === 'CONTACT US' ? 'bg-orange py-[10px] px-[20px] text-white font-poppins font-semibold rounded-lg hover:bg-orange hover:text-white' : 'text-white font-poppins font-bold hover:text-gray-400'}
                                             >
-                                                <span className='whitespace-nowrap'>{link.name}</span> {/* Prevent line breaks */}
+                                                <span className='whitespace-nowrap'>{link.name}</span>
                                             </button>
                                         ) : (
-                                            <Link to={link.path} className={link.name === 'CONTACT US' ? 'bg-white py-[10px] px-[20px] text-black font-poppins font-semibold rounded-lg hover:bg-orange hover:text-white' : 'text-white font-poppins font-bold hover:text-gray-400'}>
-                                                <span className='whitespace-nowrap'>{link.name}</span> {/* Prevent line breaks */}
+                                            <Link to={link.path} className={'text-white font-poppins font-bold hover:text-gray-400'}>
+                                                <span className='whitespace-nowrap'>{link.name}</span> 
                                             </Link>
                                         )}
                                         <span className="absolute bottom-[-3px] left-0 right-0 h-[2px] bg-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
                                     </li>
                                 ))}
                             </ul>
+                        </div>
+
+                        <div className='2xl:w-[10%] '>
+                            <Link to="/contact" className='bg-white py-[10px] px-[20px] text-black font-poppins font-semibold rounded-lg hover:bg-orange hover:text-white'>Contact Us</Link>
                         </div>
                     </div>
                 </div>
@@ -145,6 +148,9 @@ const Navbar = () => {
                                 </li>
                             ))}
                         </ul>
+                        <div className='2xl:w-[10%] '>
+                            <Link to="/contact" className='bg-white py-[10px] px-[20px] text-black font-poppins font-semibold rounded-lg hover:bg-orange hover:text-white'>Contact Us</Link>
+                        </div>
                     </div>
                 </Drawer>
             </div>

@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'; // For animations
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { sliderbg1, sliderbg2, sliderbg3, sliderbg4, sliderbg5, sliderbg6, sliderbg7, sliderbg8 } from '../Images/Images';
+import { slider11, sliderbg1, sliderbg10, sliderbg2, sliderbg3, sliderbg4, sliderbg5, sliderbg6, sliderbg7, sliderbg8, sliderbg9 } from '../Images/Images';
 
 const MainSlider = () => {
 
@@ -24,6 +24,9 @@ const MainSlider = () => {
         arrows: false,
     };
 
+    // Array to hold the images dynamically
+    const images = [sliderbg1, sliderbg2, sliderbg3, sliderbg4, sliderbg5, sliderbg6, sliderbg7, sliderbg8, sliderbg9, sliderbg10, slider11];
+
     return (
         <div className='lg:pt-[208px] md:pt-[120px] pt-[92px] w-[85%] m-auto' ref={ref}>
             <motion.div
@@ -33,30 +36,11 @@ const MainSlider = () => {
                 transition={{ duration: 0.5 }}
             >
                 <Slider {...sliderSettings}>
-                    <div className="text-white text-center">
-                        <img src={sliderbg3} className='lg:h-[680px] md:h-[400px] w-[100%]' alt='slider images' />
-                    </div>
-                    <div className="text-white text-center"  >
-                        <img src={sliderbg1} className='lg:h-[680px] md:h-[400px] w-[100%]' alt='slider images' />
-                    </div>
-                    <div className="text-white text-center">
-                        <img src={sliderbg2} className='lg:h-[680px] md:h-[400px] w-[100%]' alt='slider images' />
-                    </div>
-                    <div className="text-white text-center ">
-                        <img src={sliderbg4} className='lg:h-[680px] md:h-[400px] w-[100%]' alt='slider images' />
-                    </div>
-                    <div className="text-white text-center ">
-                        <img src={sliderbg5} className='lg:h-[680px] md:h-[400px] w-[100%]' alt='slider images' />
-                    </div>
-                    <div className="text-white text-center ">
-                        <img src={sliderbg6} className='lg:h-[680px] md:h-[400px]  w-[100%]' alt='slider images' />
-                    </div>
-                    <div className="text-white text-center ">
-                        <img src={sliderbg7} className='lg:h-[680px] md:h-[400px] w-[100%]' alt='slider images' />
-                    </div>
-                    <div className="text-white text-center ">
-                        <img src={sliderbg8} className='lg:h-[680px] md:h-[400px] w-[100%]' alt='slider images' />
-                    </div>
+                    {images.map((image, index) => (
+                        <div key={index} className="text-white text-center">
+                            <img src={image} className='lg:h-[680px] md:h-[400px] w-[100%]' alt={`slider image ${index + 1}`} />
+                        </div>
+                    ))}
                 </Slider>
             </motion.div>
         </div>
