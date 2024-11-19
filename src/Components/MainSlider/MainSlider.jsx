@@ -30,7 +30,7 @@ const MainSlider = () => {
     return (
         <div className='lg:pt-[208px] md:pt-[120px] pt-[92px] w-[85%] m-auto' ref={ref}>
             <motion.div
-                className='bg-black lg:h-[680px] md:h-[400px]'
+                className=' lg:h-[680px] md:h-[400px]'
                 initial={{ opacity: 0, transform: 'translateY(100px)' }}
                 animate={inView ? { opacity: 1, transform: 'translateY(0)' } : {}}
                 transition={{ duration: 0.5 }}
@@ -38,7 +38,7 @@ const MainSlider = () => {
                 <Slider {...sliderSettings}>
                     {images.map((image, index) => (
                         <div key={index} className="text-white text-center">
-                            <img src={image} className='lg:h-[680px] md:h-[400px] w-[100%]' alt={`slider image ${index + 1}`} />
+                            <img src={image} className='lg:min-h-[680px] md:min-h-[400px] md:max-h-[400px] min-h-[200px] max-h-[200px] w-[100%]' alt={`slider image ${index + 1}`} />
                         </div>
                     ))}
                 </Slider>

@@ -3,8 +3,8 @@ import { motion } from 'framer-motion';
 import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
 import { Link } from 'react-router-dom';
-import Slider from 'react-slick';  
-import { galery1, galery2, galery5, galery6 } from '../Images/Images';
+import Slider from 'react-slick';
+import { galery1, galery2, galery5, galery6, semminar1, semminar3, semminar4 } from '../Images/Images';
 
 const containerVariants = {
     hidden: { opacity: 0 },
@@ -38,7 +38,7 @@ const sliderSettings = {
 
 const WeAreOurSafety = () => {
     const { ref, inView } = useInView({
-        triggerOnce: false,  
+        triggerOnce: false,
         threshold: 0.1,
     });
 
@@ -109,13 +109,22 @@ const WeAreOurSafety = () => {
                 >
                     <Slider {...sliderSettings}>
                         <div>
+                            <img src={semminar1} alt='Slide 1' className='w-full md:min-h-[650px] md:max-h-[650px] object-fill min-h-[300px]' />
+                        </div>
+                        <div>
+                            <img src={semminar3} alt='Slide 1' className='w-full md:min-h-[650px] md:max-h-[650px] object-fill min-h-[300px]' />
+                        </div>
+                        <div>
+                            <img src={semminar4} alt='Slide 1' className='w-full md:min-h-[650px] md:max-h-[650px] object-fill min-h-[300px]' />
+                        </div>
+                        <div>
                             <img src={galery1} alt='Slide 1' className='w-full md:min-h-[650px] md:max-h-[650px] object-cover min-h-[300px]' />
                         </div>
                         <div>
                             <img src={galery5} alt='Slide 2' className='w-full md:min-h-[650px] md:max-h-[650px] object-cover min-h-[300px]' />
                         </div>
                         <div>
-                            <img src={galery2 } alt='Slide 3' className='w-full md:min-h-[650px] md:max-h-[650px] object-cover min-h-[300px]' />
+                            <img src={galery2} alt='Slide 3' className='w-full md:min-h-[650px] md:max-h-[650px] object-cover min-h-[300px]' />
                         </div>
                     </Slider>
                 </motion.div>

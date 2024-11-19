@@ -53,7 +53,7 @@ const TrainingAndAudit = () => {
     };
 
     return (
-        <div className='lg:max-w-[1850px] px-[20px] m-auto lg:pt-[40px] pt-[100px] pb-[50px]'>
+        <div className='lg:max-w-[1850px] px-[20px] m-auto lg:pt-[40px] pt-[20px] pb-[50px]'>
             <div className='lg:pt-[200px] md:pt-[120px] pt-[92px]'>
 
                 <div className='flex justify-center md:flex-row flex-col items-center gap-[15px] '>

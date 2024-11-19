@@ -55,7 +55,7 @@ const Esg = () => {
     return (
         
         <div className='lg:max-w-[1850px] px-[20px] m-auto lg:pt-[40px] pt-[100px]'>
-            <div className='lg:pt-[220px] md:pt-[120px] pt-[92px]'>
+            <div className='lg:pt-[220px] md:pt-[120px] pt-[20px]'>
                 <div>
                     <img src={sliderbg10} alt='eng' className='w-[100%]' />
 

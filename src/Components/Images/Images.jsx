@@ -65,10 +65,18 @@ import ltlogo from "./ltlogo.png";
 import DMRSICON from "./DMRC.jpg";
 import NewExpandedLogo from "./New-Expanded-Logo-02.png";
 import industowers from "./industowers.jpg";
-import regal from "./regal.jpg"
+import regal from "./regal.jpg";
+import semminar1 from "./semminar1.jpg";
+import semminar2 from "./semminar2.jpg";
+import semminar3 from "./semminar3.jpg";
+import semminar4 from "./semminar4.jpg";
 
 export {
     regal,
+    semminar1,
+    semminar2,
+    semminar3,
+    semminar4,
     DMRSICON,
     industowers,
     NewExpandedLogo,

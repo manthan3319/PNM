@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { galery1, galery2, galery3, galery4, galery5, galery6, galery7 } from '../Images/Images'; // Import your images
+import { galery1, galery2, galery3, galery4, galery5, galery6, galery7, semminar1, semminar2, semminar3, semminar4 } from '../Images/Images'; // Import your images
 
 const Gallery = () => {
   useEffect(() => {
@@ -8,16 +8,18 @@ const Gallery = () => {
   }, []);
 
   const galleryImages = [
-    { id: 1, src: galery1, alt: 'Image 1' },
+    { id: 11, src: semminar1, alt: 'Image 11' },
+    { id: 12, src: semminar2, alt: 'Image 11' },
+    { id: 13, src: semminar3, alt: 'Image 11' },
+    { id: 14, src: semminar4, alt: 'Image 11' },
     { id: 2, src: galery2, alt: 'Image 2' },
     { id: 3, src: galery3, alt: 'Image 3' },
-    { id: 4, src: galery4, alt: 'Image 4' },
-    { id: 5, src: galery5, alt: 'Image 5' },
     { id: 6, src: galery6, alt: 'Image 6' },
     { id: 7, src: galery7, alt: 'Image 7' },
     { id: 8, src: galery4, alt: 'Image 8' },
     { id: 9, src: galery1, alt: 'Image 9' },
     { id: 10, src: galery5, alt: 'Image 10' },
+ 
   ];
 
   return (

@@ -207,7 +207,7 @@ const AboutUs = () => {
                 </div>
 
                 {/* Our Team Section */}
-                <div className='mt-[50px]'>
+                {/* <div className='mt-[50px]'>
                     <div className='text-center'>
                         <h1 className='text-[45px] font-poppins font-bold border-b inline-block'>
                             Our Team
@@ -227,7 +227,7 @@ const AboutUs = () => {
                             ))}
                         </Slider>
                     </div>
-                </div>
+                </div> */}
             </div>
         </motion.div>
     );
