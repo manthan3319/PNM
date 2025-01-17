@@ -62,7 +62,7 @@ const ContactUs = () => {
                         >
                             <motion.div className='text-center bg-white border-[2px] border-custome px-[15px] py-[25px] rounded-xl contact_Card_shadow'>
                                 <span className='text-[35px]'><i className="fa fa-phone" aria-hidden="true"></i></span>
-                                <p className='text-[20px] font-bold font-poppins'>+91 63528 45642</p>
+                                <p className='text-[20px] font-bold font-poppins'>+91 79036 89288</p>
                             </motion.div>
 
                             <motion.div className='text-center bg-white border-[2px] border-custome px-[15px] py-[25px] rounded-xl contact_Card_shadow'>

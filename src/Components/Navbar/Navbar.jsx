@@ -69,7 +69,7 @@ const Navbar = () => {
                             <span className='lg:text-[20px]'>
                                 <i className="fa fa-phone" aria-hidden="true"></i>
                             </span>
-                            <span>+91 63528 45642, 0261-7961074</span>
+                            <span>+91 79036 89288, 0261-7961074</span>
                         </p>
                     </div>
                 </div>
