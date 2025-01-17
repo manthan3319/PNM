@@ -65,6 +65,7 @@ const Navbar = () => {
                             <span>811, SNS Arista, B/H Prime Shoppers, Opp. Happy Home Residency <br /> University Road, Vesu, Surat- 395007</span>
                         </p>
 
+             
                         <p className='font-poppins text-black flex items-center gap-[5px]'>
                             <span className='lg:text-[20px]'>
                                 <i className="fa fa-phone" aria-hidden="true"></i>
