@@ -52,7 +52,7 @@ const AboutUs = () => {
   return (
     <motion.div
       ref={ref}
-      className="bg-gradient-to-b from-amber-50 to-white py-16 px-4 sm:px-6 lg:px-8"
+      className="bg-gradient-to-b from-amber-50 to-white  px-4 sm:px-6 lg:px-8"
       variants={containerVariants}
       initial="hidden"
       animate={inView ? "visible" : "hidden"}

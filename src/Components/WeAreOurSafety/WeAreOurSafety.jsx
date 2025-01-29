@@ -65,7 +65,7 @@ const WeAreOurSafety = () => {
   })
 
   return (
-    <div className="py-8 md:py-16 bg-gradient-to-b from-gray-50 to-white overflow-hidden pt-80" ref={ref}>
+    <div className="py-8 md:py-16 bg-gradient-to-b from-gray-50 to-white overflow-hidden " ref={ref}>
       <div className="container mx-auto px-4">
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
           <motion.div
