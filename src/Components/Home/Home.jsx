@@ -29,7 +29,7 @@ const Home = () => {
         <KeppInTouce />
       </div>
       <div>
-        <GoogleMaps/>
+        {/* <GoogleMaps/> */}
       </div>
     </div>
   );

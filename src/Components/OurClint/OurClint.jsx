@@ -99,7 +99,7 @@ const OurClint = () => {
         </Slider>
       </div>
 
-      <div className="mt-10">
+      {/* <div className="mt-10">
         <h2 className="text-center text-[30px] font-bold mb-6">What Our Clients Say</h2>
         <Slider {...reviewSettings}>
           {clientReviews.map((review) => (
@@ -109,7 +109,7 @@ const OurClint = () => {
             </div>
           ))}
         </Slider>
-      </div>
+      </div> */}
     </div>
   );
 };
